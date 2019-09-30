@@ -1,0 +1,498 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D3BC396423350013001EF3F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BC396323350013001EF3F8 /* AppDelegate.swift */; };
+		D3BC396623350013001EF3F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BC396523350013001EF3F8 /* ViewController.swift */; };
+		D3BC396923350013001EF3F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3BC396723350013001EF3F8 /* Main.storyboard */; };
+		D3BC396C23350013001EF3F8 /* HereMaps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3BC396A23350013001EF3F8 /* HereMaps.xcdatamodeld */; };
+		D3BC396E23350019001EF3F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3BC396D23350019001EF3F8 /* Assets.xcassets */; };
+		D3BC397123350019001EF3F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3BC396F23350019001EF3F8 /* LaunchScreen.storyboard */; };
+		D3BC397D2335086C001EF3F8 /* PlaceVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BC397C2335086C001EF3F8 /* PlaceVM.swift */; };
+		D3BC397F23350A53001EF3F8 /* GeocodeObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BC397E23350A53001EF3F8 /* GeocodeObj.swift */; };
+		D3BC398123350F3F001EF3F8 /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BC398023350F3F001EF3F8 /* Places.swift */; };
+		D3BC398423351603001EF3F8 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BC398323351603001EF3F8 /* Dynamic.swift */; };
+		D3BC398623351666001EF3F8 /* BindingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BC398523351666001EF3F8 /* BindingTextField.swift */; };
+		D3BEEDB2233B7839008D31C8 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BEEDB1233B7839008D31C8 /* EndPointType.swift */; };
+		D3BEEDB4233B78DA008D31C8 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BEEDB3233B78DA008D31C8 /* HTTPMethod.swift */; };
+		D3BEEDB6233B7A4C008D31C8 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BEEDB5233B7A4C008D31C8 /* HTTPTask.swift */; };
+		D3BEEDB8233B7C5F008D31C8 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BEEDB7233B7C5F008D31C8 /* ParameterEncoding.swift */; };
+		D3BEEDBA233B8030008D31C8 /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BEEDB9233B8030008D31C8 /* URLParameterEncoder.swift */; };
+		D3BEEDBC233BC284008D31C8 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BEEDBB233BC284008D31C8 /* JSONParameterEncoder.swift */; };
+		D3BEEDBE233BC48A008D31C8 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BEEDBD233BC48A008D31C8 /* NetworkRouter.swift */; };
+		D3BEEDC02340C0D7008D31C8 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BEEDBF2340C0D7008D31C8 /* Router.swift */; };
+		D3BEEDC22341167F008D31C8 /* HereEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BEEDC12341167F008D31C8 /* HereEndPoint.swift */; };
+		D3BEEDC423411D11008D31C8 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BEEDC323411D11008D31C8 /* NetworkManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D3BC396023350013001EF3F8 /* HereMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HereMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3BC396323350013001EF3F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D3BC396523350013001EF3F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D3BC396823350013001EF3F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D3BC396B23350013001EF3F8 /* HereMaps.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HereMaps.xcdatamodel; sourceTree = "<group>"; };
+		D3BC396D23350019001EF3F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D3BC397023350019001EF3F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D3BC397223350019001EF3F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3BC397C2335086C001EF3F8 /* PlaceVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceVM.swift; sourceTree = "<group>"; };
+		D3BC397E23350A53001EF3F8 /* GeocodeObj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodeObj.swift; sourceTree = "<group>"; };
+		D3BC398023350F3F001EF3F8 /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
+		D3BC398323351603001EF3F8 /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
+		D3BC398523351666001EF3F8 /* BindingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingTextField.swift; sourceTree = "<group>"; };
+		D3BEEDB1233B7839008D31C8 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		D3BEEDB3233B78DA008D31C8 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		D3BEEDB5233B7A4C008D31C8 /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		D3BEEDB7233B7C5F008D31C8 /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		D3BEEDB9233B8030008D31C8 /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
+		D3BEEDBB233BC284008D31C8 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		D3BEEDBD233BC48A008D31C8 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		D3BEEDBF2340C0D7008D31C8 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		D3BEEDC12341167F008D31C8 /* HereEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HereEndPoint.swift; sourceTree = "<group>"; };
+		D3BEEDC323411D11008D31C8 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D3BC395D23350013001EF3F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D3BC395723350012001EF3F8 = {
+			isa = PBXGroup;
+			children = (
+				D3BC396223350013001EF3F8 /* HereMaps */,
+				D3BC396123350013001EF3F8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D3BC396123350013001EF3F8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D3BC396023350013001EF3F8 /* HereMaps.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D3BC396223350013001EF3F8 /* HereMaps */ = {
+			isa = PBXGroup;
+			children = (
+				D3BC397B233506BC001EF3F8 /* Managers */,
+				D3BC397A233506B2001EF3F8 /* Extensions */,
+				D3BC3979233506AA001EF3F8 /* Common */,
+				D3BC39782335068D001EF3F8 /* ViewModel */,
+				D3BC396323350013001EF3F8 /* AppDelegate.swift */,
+				D3BC396523350013001EF3F8 /* ViewController.swift */,
+				D3BC396723350013001EF3F8 /* Main.storyboard */,
+				D3BC396D23350019001EF3F8 /* Assets.xcassets */,
+				D3BC396F23350019001EF3F8 /* LaunchScreen.storyboard */,
+				D3BC397223350019001EF3F8 /* Info.plist */,
+				D3BC396A23350013001EF3F8 /* HereMaps.xcdatamodeld */,
+			);
+			path = HereMaps;
+			sourceTree = "<group>";
+		};
+		D3BC39782335068D001EF3F8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D3BC397C2335086C001EF3F8 /* PlaceVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D3BC3979233506AA001EF3F8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D3BC398323351603001EF3F8 /* Dynamic.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		D3BC397A233506B2001EF3F8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D3BC398523351666001EF3F8 /* BindingTextField.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D3BC397B233506BC001EF3F8 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D3BEEDAC233B7742008D31C8 /* Network */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		D3BC39822335108C001EF3F8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D3BC397E23350A53001EF3F8 /* GeocodeObj.swift */,
+				D3BC398023350F3F001EF3F8 /* Places.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D3BEEDAC233B7742008D31C8 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D3BEEDB0233B7775008D31C8 /* Encoding */,
+				D3BEEDAF233B776B008D31C8 /* Service */,
+				D3BC39822335108C001EF3F8 /* Model */,
+				D3BEEDAE233B7766008D31C8 /* Manager */,
+				D3BEEDAD233B7750008D31C8 /* EndPoint */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D3BEEDAD233B7750008D31C8 /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				D3BEEDC12341167F008D31C8 /* HereEndPoint.swift */,
+			);
+			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		D3BEEDAE233B7766008D31C8 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				D3BEEDC323411D11008D31C8 /* NetworkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		D3BEEDAF233B776B008D31C8 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D3BEEDB1233B7839008D31C8 /* EndPointType.swift */,
+				D3BEEDB3233B78DA008D31C8 /* HTTPMethod.swift */,
+				D3BEEDB5233B7A4C008D31C8 /* HTTPTask.swift */,
+				D3BEEDBD233BC48A008D31C8 /* NetworkRouter.swift */,
+				D3BEEDBF2340C0D7008D31C8 /* Router.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		D3BEEDB0233B7775008D31C8 /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				D3BEEDB7233B7C5F008D31C8 /* ParameterEncoding.swift */,
+				D3BEEDB9233B8030008D31C8 /* URLParameterEncoder.swift */,
+				D3BEEDBB233BC284008D31C8 /* JSONParameterEncoder.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D3BC395F23350013001EF3F8 /* HereMaps */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3BC397523350019001EF3F8 /* Build configuration list for PBXNativeTarget "HereMaps" */;
+			buildPhases = (
+				D3BC395C23350013001EF3F8 /* Sources */,
+				D3BC395D23350013001EF3F8 /* Frameworks */,
+				D3BC395E23350013001EF3F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HereMaps;
+			productName = HereMaps;
+			productReference = D3BC396023350013001EF3F8 /* HereMaps.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D3BC395823350012001EF3F8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = MaxMan;
+				TargetAttributes = {
+					D3BC395F23350013001EF3F8 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+				};
+			};
+			buildConfigurationList = D3BC395B23350012001EF3F8 /* Build configuration list for PBXProject "HereMaps" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D3BC395723350012001EF3F8;
+			productRefGroup = D3BC396123350013001EF3F8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D3BC395F23350013001EF3F8 /* HereMaps */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D3BC395E23350013001EF3F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3BC397123350019001EF3F8 /* LaunchScreen.storyboard in Resources */,
+				D3BC396E23350019001EF3F8 /* Assets.xcassets in Resources */,
+				D3BC396923350013001EF3F8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D3BC395C23350013001EF3F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3BEEDC423411D11008D31C8 /* NetworkManager.swift in Sources */,
+				D3BC396623350013001EF3F8 /* ViewController.swift in Sources */,
+				D3BC398123350F3F001EF3F8 /* Places.swift in Sources */,
+				D3BEEDBE233BC48A008D31C8 /* NetworkRouter.swift in Sources */,
+				D3BEEDB2233B7839008D31C8 /* EndPointType.swift in Sources */,
+				D3BC397F23350A53001EF3F8 /* GeocodeObj.swift in Sources */,
+				D3BC398423351603001EF3F8 /* Dynamic.swift in Sources */,
+				D3BC396C23350013001EF3F8 /* HereMaps.xcdatamodeld in Sources */,
+				D3BEEDB8233B7C5F008D31C8 /* ParameterEncoding.swift in Sources */,
+				D3BEEDC02340C0D7008D31C8 /* Router.swift in Sources */,
+				D3BC398623351666001EF3F8 /* BindingTextField.swift in Sources */,
+				D3BEEDBA233B8030008D31C8 /* URLParameterEncoder.swift in Sources */,
+				D3BEEDB6233B7A4C008D31C8 /* HTTPTask.swift in Sources */,
+				D3BEEDC22341167F008D31C8 /* HereEndPoint.swift in Sources */,
+				D3BC396423350013001EF3F8 /* AppDelegate.swift in Sources */,
+				D3BEEDB4233B78DA008D31C8 /* HTTPMethod.swift in Sources */,
+				D3BEEDBC233BC284008D31C8 /* JSONParameterEncoder.swift in Sources */,
+				D3BC397D2335086C001EF3F8 /* PlaceVM.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D3BC396723350013001EF3F8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D3BC396823350013001EF3F8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D3BC396F23350019001EF3F8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D3BC397023350019001EF3F8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D3BC397323350019001EF3F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D3BC397423350019001EF3F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D3BC397623350019001EF3F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GH795XLVUG;
+				INFOPLIST_FILE = HereMaps/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.heremaps.max;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D3BC397723350019001EF3F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GH795XLVUG;
+				INFOPLIST_FILE = HereMaps/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.heremaps.max;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D3BC395B23350012001EF3F8 /* Build configuration list for PBXProject "HereMaps" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3BC397323350019001EF3F8 /* Debug */,
+				D3BC397423350019001EF3F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3BC397523350019001EF3F8 /* Build configuration list for PBXNativeTarget "HereMaps" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3BC397623350019001EF3F8 /* Debug */,
+				D3BC397723350019001EF3F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D3BC396A23350013001EF3F8 /* HereMaps.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D3BC396B23350013001EF3F8 /* HereMaps.xcdatamodel */,
+			);
+			currentVersion = D3BC396B23350013001EF3F8 /* HereMaps.xcdatamodel */;
+			path = HereMaps.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D3BC395823350012001EF3F8 /* Project object */;
+}
