@@ -6,10 +6,6 @@
 //  Copyright © 2019 MaxMan. All rights reserved.
 //
 
-// reference:
-// https://medium.com/@azamsharp/mvvm-in-ios-from-net-perspective-580eb7f4f129
-// https://medium.com/@azamsharp/mvvm-in-ios-viewmodel-and-networking-5bbe1d768c7f
-
 import Foundation
 
 class Dynamic<T> {

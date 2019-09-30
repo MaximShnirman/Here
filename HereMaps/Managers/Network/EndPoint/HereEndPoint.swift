@@ -71,12 +71,6 @@ extension HereApi: EndPointType {
                                                               "gen": 9,
                                                               "app_id": NetworkManager.AppID,
                                                               "app_code": NetworkManager.AppCode])
-        
-           // places/v1/discover/explore?
-           // at=52.5159%2C13.3777&
-           // cat=sights-museums&
-           // app_id=DemoAppId01082013GAL&
-           // app_code=AJKnXv84fjrb0KIHawS0Tg
         case .popularPlaces(let location):
             return HTTPTask.requestParameters(bodyParameters: nil,
                                               urlParameters: ["at": "\(location.x),\(location.y)",
