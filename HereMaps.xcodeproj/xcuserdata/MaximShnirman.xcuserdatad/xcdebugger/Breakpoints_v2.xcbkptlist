@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2C59B68D-81A8-4E31-8B6F-812D6C1D2779"
-            shouldBeEnabled = "Yes"
+            uuid = "83098245-7022-494B-BE99-D7A690764E82"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HereMaps/ViewController.swift"
+            filePath = "HereMaps/Views/TableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "prepareForReuse()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

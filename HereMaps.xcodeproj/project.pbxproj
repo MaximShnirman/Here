@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D385774C2343B8D100F74E56 /* ViewControllerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D385774B2343B8D100F74E56 /* ViewControllerVM.swift */; };
+		D385774D2343BB5900F74E56 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BC398323351603001EF3F8 /* Observable.swift */; };
 		D3BC396423350013001EF3F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BC396323350013001EF3F8 /* AppDelegate.swift */; };
 		D3BC396623350013001EF3F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BC396523350013001EF3F8 /* ViewController.swift */; };
 		D3BC396923350013001EF3F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3BC396723350013001EF3F8 /* Main.storyboard */; };
@@ -16,7 +18,6 @@
 		D3BC397D2335086C001EF3F8 /* PlaceVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BC397C2335086C001EF3F8 /* PlaceVM.swift */; };
 		D3BC397F23350A53001EF3F8 /* GeocodeObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BC397E23350A53001EF3F8 /* GeocodeObj.swift */; };
 		D3BC398123350F3F001EF3F8 /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BC398023350F3F001EF3F8 /* Places.swift */; };
-		D3BC398423351603001EF3F8 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BC398323351603001EF3F8 /* Dynamic.swift */; };
 		D3BC398623351666001EF3F8 /* BindingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BC398523351666001EF3F8 /* BindingTextField.swift */; };
 		D3BEEDB2233B7839008D31C8 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BEEDB1233B7839008D31C8 /* EndPointType.swift */; };
 		D3BEEDB4233B78DA008D31C8 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BEEDB3233B78DA008D31C8 /* HTTPMethod.swift */; };
@@ -28,9 +29,11 @@
 		D3BEEDC02340C0D7008D31C8 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BEEDBF2340C0D7008D31C8 /* Router.swift */; };
 		D3BEEDC22341167F008D31C8 /* HereEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BEEDC12341167F008D31C8 /* HereEndPoint.swift */; };
 		D3BEEDC423411D11008D31C8 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BEEDC323411D11008D31C8 /* NetworkManager.swift */; };
+		D3BEEDC623437A29008D31C8 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BEEDC523437A29008D31C8 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D385774B2343B8D100F74E56 /* ViewControllerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerVM.swift; sourceTree = "<group>"; };
 		D3BC396023350013001EF3F8 /* HereMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HereMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3BC396323350013001EF3F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3BC396523350013001EF3F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,7 +45,7 @@
 		D3BC397C2335086C001EF3F8 /* PlaceVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceVM.swift; sourceTree = "<group>"; };
 		D3BC397E23350A53001EF3F8 /* GeocodeObj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodeObj.swift; sourceTree = "<group>"; };
 		D3BC398023350F3F001EF3F8 /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
-		D3BC398323351603001EF3F8 /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
+		D3BC398323351603001EF3F8 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		D3BC398523351666001EF3F8 /* BindingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingTextField.swift; sourceTree = "<group>"; };
 		D3BEEDB1233B7839008D31C8 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 		D3BEEDB3233B78DA008D31C8 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -54,6 +57,7 @@
 		D3BEEDBF2340C0D7008D31C8 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		D3BEEDC12341167F008D31C8 /* HereEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HereEndPoint.swift; sourceTree = "<group>"; };
 		D3BEEDC323411D11008D31C8 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		D3BEEDC523437A29008D31C8 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,9 +93,9 @@
 				D3BC397B233506BC001EF3F8 /* Managers */,
 				D3BC397A233506B2001EF3F8 /* Extensions */,
 				D3BC3979233506AA001EF3F8 /* Common */,
-				D3BC39782335068D001EF3F8 /* ViewModel */,
+				D3BC39782335068D001EF3F8 /* ViewModels */,
+				D3BEEDC723437A39008D31C8 /* Views */,
 				D3BC396323350013001EF3F8 /* AppDelegate.swift */,
-				D3BC396523350013001EF3F8 /* ViewController.swift */,
 				D3BC396723350013001EF3F8 /* Main.storyboard */,
 				D3BC396D23350019001EF3F8 /* Assets.xcassets */,
 				D3BC396F23350019001EF3F8 /* LaunchScreen.storyboard */,
@@ -101,18 +105,19 @@
 			path = HereMaps;
 			sourceTree = "<group>";
 		};
-		D3BC39782335068D001EF3F8 /* ViewModel */ = {
+		D3BC39782335068D001EF3F8 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				D3BC397C2335086C001EF3F8 /* PlaceVM.swift */,
+				D385774B2343B8D100F74E56 /* ViewControllerVM.swift */,
 			);
-			path = ViewModel;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		D3BC3979233506AA001EF3F8 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				D3BC398323351603001EF3F8 /* Dynamic.swift */,
+				D3BC398323351603001EF3F8 /* Observable.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -192,6 +197,15 @@
 			path = Encoding;
 			sourceTree = "<group>";
 		};
+		D3BEEDC723437A39008D31C8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D3BC396523350013001EF3F8 /* ViewController.swift */,
+				D3BEEDC523437A29008D31C8 /* TableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -263,13 +277,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D385774D2343BB5900F74E56 /* Observable.swift in Sources */,
 				D3BEEDC423411D11008D31C8 /* NetworkManager.swift in Sources */,
 				D3BC396623350013001EF3F8 /* ViewController.swift in Sources */,
 				D3BC398123350F3F001EF3F8 /* Places.swift in Sources */,
 				D3BEEDBE233BC48A008D31C8 /* NetworkRouter.swift in Sources */,
+				D3BEEDC623437A29008D31C8 /* TableViewCell.swift in Sources */,
 				D3BEEDB2233B7839008D31C8 /* EndPointType.swift in Sources */,
 				D3BC397F23350A53001EF3F8 /* GeocodeObj.swift in Sources */,
-				D3BC398423351603001EF3F8 /* Dynamic.swift in Sources */,
+				D385774C2343B8D100F74E56 /* ViewControllerVM.swift in Sources */,
 				D3BC396C23350013001EF3F8 /* HereMaps.xcdatamodeld in Sources */,
 				D3BEEDB8233B7C5F008D31C8 /* ParameterEncoding.swift in Sources */,
 				D3BEEDC02340C0D7008D31C8 /* Router.swift in Sources */,

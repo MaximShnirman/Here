@@ -7,16 +7,21 @@
 //
 
 import Foundation
+import CoreGraphics
 
 struct PlaceVM {
-    var location: String
-    var address: String
+    var title: String
+    var vicinity: String
+    var href: String
+    var id: String
 }
 
 extension PlaceVM {
     init(place: PlacesModel.Item) {
-        self.location = place.icon
-        self.address = place.id
+        self.title = place.title
+        self.vicinity = place.vicinity
+        self.href = place.href
+        self.id = place.id
     }
 }
 

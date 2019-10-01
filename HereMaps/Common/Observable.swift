@@ -1,5 +1,5 @@
 //
-//  Dynamic.swift
+//  Observable.swift
 //  HereMaps
 //
 //  Created by Maxim Shnirman on 20/09/2019.
@@ -8,13 +8,15 @@
 
 import Foundation
 
-class Dynamic<T> {
+class Observable<T> {
     
-    var bind: (T) -> () = { _ in }
+    var valueChanged: (T) -> () = { _ in }
     
-    var value: T? {
+    var value: T {
         didSet {
-            bind(value!)
+            DispatchQueue.main.async {
+                self.valueChanged(self.value)
+            }
         }
     }
     
