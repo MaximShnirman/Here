@@ -39,6 +39,7 @@ extension HereApi: EndPointType {
             guard let url = URL(string: "https://places.demo.api.here.com/") else { fatalError("url cannot be configured") }
             return url
         }
+        // TODO: use up environmentBaseURL
 //        guard let url = URL(string: environmentBaseURL) else { fatalError("url cannot be configured") }
 //        return url
     }

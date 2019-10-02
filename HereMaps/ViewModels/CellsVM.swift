@@ -1,5 +1,5 @@
 //
-//  PlaceVM.swift
+//  CellVM.swift
 //  HereMaps
 //
 //  Created by Maxim Shnirman on 20/09/2019.
@@ -9,14 +9,14 @@
 import Foundation
 import CoreGraphics
 
-struct PlaceVM {
+struct CellVM {
     var title: String
     var vicinity: String
     var href: String
     var id: String
 }
 
-extension PlaceVM {
+extension CellVM: RowCellViewModel {
     init(place: PlacesModel.Item) {
         self.title = place.title
         self.vicinity = place.vicinity
@@ -25,13 +25,14 @@ extension PlaceVM {
     }
 }
 
-struct PlacesVM {
+struct CellsVM {
     var title: String? = "Places"
-    var places: [PlaceVM] = [PlaceVM]()
+    var cellHeight: CGFloat = 128.0
+    var places: [CellVM] = [CellVM]()
 }
 
-extension PlacesVM {
-    init(places: [PlaceVM]) {
+extension CellsVM {
+    init(places: [CellVM]) {
         self.places = places
     }
 }

@@ -11,7 +11,7 @@ import CoreGraphics
 
 struct ViewControllerVM {
     
-    var viewModel = Observable<PlacesVM>(PlacesVM())
+    var viewModel = Observable<CellsVM>(CellsVM())
 
     func start() {
         loadPlaces { (placesVM) in
@@ -19,8 +19,17 @@ struct ViewControllerVM {
             self.viewModel.value = places
         }
     }
+    
+    func cellIdentifier(for viewModel: RowCellViewModel) -> String {
+        switch viewModel {
+        case is CellsVM:
+            return TableViewCell.Identifier
+        default:
+            fatalError("Unexpected view model type: \(viewModel)")
+        }
+    }
 
-    private func loadPlaces(completion: @escaping ((PlacesVM?) -> ())) {
+    private func loadPlaces(completion: @escaping ((CellsVM?) -> ())) {
         NetworkManager().getPlaces(location: CGPoint(x: 19.4333, y: -99.1333)) { (result, error) in
             if let error = error {
                 // TODO: add error handing
@@ -29,9 +38,9 @@ struct ViewControllerVM {
             } else {
                 guard let result = result else { return }
                 let places = result.results.items.compactMap { item in
-                    return PlaceVM(place: item)
+                    return CellVM(place: item)
                 }
-                let placesVm = PlacesVM(places: places)
+                let placesVm = CellsVM(places: places)
                 completion(placesVm)
             }
         }

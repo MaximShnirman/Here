@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private let controllerVM = ViewControllerVM()
-    private var viewModel: Observable<PlacesVM>? {
+    private var viewModel: Observable<CellsVM>? {
         return controllerVM.viewModel
     }
     
@@ -21,8 +21,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         viewModel?.valueChanged = { [weak self] (_) in
             DispatchQueue.main.async {
-                self?.tableView.reloadData()
                 self?.title = self?.viewModel?.value.title
+                self?.tableView.reloadData()
             }
         }
         controllerVM.start()
@@ -36,7 +36,7 @@ extension ViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 128.0
+        return viewModel?.value.cellHeight ?? 0
     }
 }
 
@@ -47,8 +47,15 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.Identifier) as? TableViewCell else { return UITableViewCell() }
-        cell.setCell(with: (viewModel?.value.places[indexPath.row])!)
+        guard let vm = viewModel else { return UITableViewCell() }
+        // vm.value.places can contain now multiple types of objects conforming to RowCellViewModel
+        let cvm = vm.value.places[indexPath.row] as RowCellViewModel
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: controllerVM.cellIdentifier(for: cvm)) else { return UITableViewCell() }
+        
+        if let cell = cell as? ConfigurableCell {
+            cell.setupCell(viewModel: cvm)
+        }
+        
         return cell
     }
 }

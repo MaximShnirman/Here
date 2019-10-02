@@ -27,11 +27,15 @@ class TableViewCell: UITableViewCell {
         href.text = ""
         id.text = ""
     }
+}
+
+extension TableViewCell: ConfigurableCell {
     
-    func setCell(with place: PlaceVM) {
-        title.text = place.title
-        vicinity.text = place.vicinity
-        href.text = place.href
-        id.text = place.id
+    func setupCell(viewModel: RowCellViewModel) {
+        guard let vm = viewModel as? CellVM else { return }
+        title.text = vm.title
+        vicinity.text = vm.vicinity
+        href.text = vm.href
+        id.text = vm.id
     }
 }

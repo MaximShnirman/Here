@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D37737822344AE8200D9CA33 /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37737812344AE8200D9CA33 /* ConfigurableCell.swift */; };
+		D37737842344AEBA00D9CA33 /* RowCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37737832344AEBA00D9CA33 /* RowCellViewModel.swift */; };
 		D385774C2343B8D100F74E56 /* ViewControllerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D385774B2343B8D100F74E56 /* ViewControllerVM.swift */; };
 		D385774D2343BB5900F74E56 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BC398323351603001EF3F8 /* Observable.swift */; };
 		D3BC396423350013001EF3F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BC396323350013001EF3F8 /* AppDelegate.swift */; };
@@ -15,7 +17,7 @@
 		D3BC396C23350013001EF3F8 /* HereMaps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3BC396A23350013001EF3F8 /* HereMaps.xcdatamodeld */; };
 		D3BC396E23350019001EF3F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3BC396D23350019001EF3F8 /* Assets.xcassets */; };
 		D3BC397123350019001EF3F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3BC396F23350019001EF3F8 /* LaunchScreen.storyboard */; };
-		D3BC397D2335086C001EF3F8 /* PlaceVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BC397C2335086C001EF3F8 /* PlaceVM.swift */; };
+		D3BC397D2335086C001EF3F8 /* CellsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BC397C2335086C001EF3F8 /* CellsVM.swift */; };
 		D3BC397F23350A53001EF3F8 /* GeocodeObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BC397E23350A53001EF3F8 /* GeocodeObj.swift */; };
 		D3BC398123350F3F001EF3F8 /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BC398023350F3F001EF3F8 /* Places.swift */; };
 		D3BC398623351666001EF3F8 /* BindingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BC398523351666001EF3F8 /* BindingTextField.swift */; };
@@ -33,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D37737812344AE8200D9CA33 /* ConfigurableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
+		D37737832344AEBA00D9CA33 /* RowCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowCellViewModel.swift; sourceTree = "<group>"; };
 		D385774B2343B8D100F74E56 /* ViewControllerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerVM.swift; sourceTree = "<group>"; };
 		D3BC396023350013001EF3F8 /* HereMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HereMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3BC396323350013001EF3F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,7 +46,7 @@
 		D3BC396D23350019001EF3F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3BC397023350019001EF3F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3BC397223350019001EF3F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D3BC397C2335086C001EF3F8 /* PlaceVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceVM.swift; sourceTree = "<group>"; };
+		D3BC397C2335086C001EF3F8 /* CellsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellsVM.swift; sourceTree = "<group>"; };
 		D3BC397E23350A53001EF3F8 /* GeocodeObj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodeObj.swift; sourceTree = "<group>"; };
 		D3BC398023350F3F001EF3F8 /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
 		D3BC398323351603001EF3F8 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
@@ -71,6 +75,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D37737802344AE0800D9CA33 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D3BC398323351603001EF3F8 /* Observable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		D3BC395723350012001EF3F8 = {
 			isa = PBXGroup;
 			children = (
@@ -91,7 +103,6 @@
 			isa = PBXGroup;
 			children = (
 				D3BC397B233506BC001EF3F8 /* Managers */,
-				D3BC397A233506B2001EF3F8 /* Extensions */,
 				D3BC3979233506AA001EF3F8 /* Common */,
 				D3BC39782335068D001EF3F8 /* ViewModels */,
 				D3BEEDC723437A39008D31C8 /* Views */,
@@ -108,7 +119,8 @@
 		D3BC39782335068D001EF3F8 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				D3BC397C2335086C001EF3F8 /* PlaceVM.swift */,
+				D37737832344AEBA00D9CA33 /* RowCellViewModel.swift */,
+				D3BC397C2335086C001EF3F8 /* CellsVM.swift */,
 				D385774B2343B8D100F74E56 /* ViewControllerVM.swift */,
 			);
 			path = ViewModels;
@@ -117,7 +129,8 @@
 		D3BC3979233506AA001EF3F8 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				D3BC398323351603001EF3F8 /* Observable.swift */,
+				D37737802344AE0800D9CA33 /* Protocols */,
+				D3BC397A233506B2001EF3F8 /* Extensions */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -200,8 +213,9 @@
 		D3BEEDC723437A39008D31C8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D3BC396523350013001EF3F8 /* ViewController.swift */,
+				D37737812344AE8200D9CA33 /* ConfigurableCell.swift */,
 				D3BEEDC523437A29008D31C8 /* TableViewCell.swift */,
+				D3BC396523350013001EF3F8 /* ViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -280,11 +294,13 @@
 				D385774D2343BB5900F74E56 /* Observable.swift in Sources */,
 				D3BEEDC423411D11008D31C8 /* NetworkManager.swift in Sources */,
 				D3BC396623350013001EF3F8 /* ViewController.swift in Sources */,
+				D37737822344AE8200D9CA33 /* ConfigurableCell.swift in Sources */,
 				D3BC398123350F3F001EF3F8 /* Places.swift in Sources */,
 				D3BEEDBE233BC48A008D31C8 /* NetworkRouter.swift in Sources */,
 				D3BEEDC623437A29008D31C8 /* TableViewCell.swift in Sources */,
 				D3BEEDB2233B7839008D31C8 /* EndPointType.swift in Sources */,
 				D3BC397F23350A53001EF3F8 /* GeocodeObj.swift in Sources */,
+				D37737842344AEBA00D9CA33 /* RowCellViewModel.swift in Sources */,
 				D385774C2343B8D100F74E56 /* ViewControllerVM.swift in Sources */,
 				D3BC396C23350013001EF3F8 /* HereMaps.xcdatamodeld in Sources */,
 				D3BEEDB8233B7C5F008D31C8 /* ParameterEncoding.swift in Sources */,
@@ -296,7 +312,7 @@
 				D3BC396423350013001EF3F8 /* AppDelegate.swift in Sources */,
 				D3BEEDB4233B78DA008D31C8 /* HTTPMethod.swift in Sources */,
 				D3BEEDBC233BC284008D31C8 /* JSONParameterEncoder.swift in Sources */,
-				D3BC397D2335086C001EF3F8 /* PlaceVM.swift in Sources */,
+				D3BC397D2335086C001EF3F8 /* CellsVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
