@@ -104,8 +104,9 @@
 			children = (
 				D3BC397B233506BC001EF3F8 /* Managers */,
 				D3BC3979233506AA001EF3F8 /* Common */,
-				D3BC39782335068D001EF3F8 /* ViewModels */,
+				D3BC39822335108C001EF3F8 /* Models */,
 				D3BEEDC723437A39008D31C8 /* Views */,
+				D3BC39782335068D001EF3F8 /* ViewModels */,
 				D3BC396323350013001EF3F8 /* AppDelegate.swift */,
 				D3BC396723350013001EF3F8 /* Main.storyboard */,
 				D3BC396D23350019001EF3F8 /* Assets.xcassets */,
@@ -151,13 +152,13 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		D3BC39822335108C001EF3F8 /* Model */ = {
+		D3BC39822335108C001EF3F8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				D3BC397E23350A53001EF3F8 /* GeocodeObj.swift */,
 				D3BC398023350F3F001EF3F8 /* Places.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		D3BEEDAC233B7742008D31C8 /* Network */ = {
@@ -165,7 +166,6 @@
 			children = (
 				D3BEEDB0233B7775008D31C8 /* Encoding */,
 				D3BEEDAF233B776B008D31C8 /* Service */,
-				D3BC39822335108C001EF3F8 /* Model */,
 				D3BEEDAE233B7766008D31C8 /* Manager */,
 				D3BEEDAD233B7750008D31C8 /* EndPoint */,
 			);
