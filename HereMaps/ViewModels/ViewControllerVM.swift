@@ -22,7 +22,7 @@ struct ViewControllerVM {
     
     func cellIdentifier(for viewModel: RowCellViewModel) -> String {
         switch viewModel {
-        case is CellsVM:
+        case is CellVM:
             return TableViewCell.Identifier
         default:
             fatalError("Unexpected view model type: \(viewModel)")
