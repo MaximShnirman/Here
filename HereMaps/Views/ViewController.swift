@@ -48,7 +48,6 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let vm = viewModel else { return UITableViewCell() }
-        // vm.value.places can contain now multiple types of objects conforming to RowCellViewModel
         let cvm = vm.value.places[indexPath.row] as RowCellViewModel
         guard let cell = tableView.dequeueReusableCell(withIdentifier: controllerVM.cellIdentifier(for: cvm)) else { return UITableViewCell() }
         

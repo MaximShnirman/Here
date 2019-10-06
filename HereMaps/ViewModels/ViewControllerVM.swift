@@ -11,7 +11,10 @@ import CoreGraphics
 
 struct ViewControllerVM {
     
+    typealias handler = ((CellsVM?) -> ())
+    
     var viewModel = Observable<CellsVM>(CellsVM())
+    private let cache = Cache<String, CellsVM>()
 
     func start() {
         loadPlaces { (placesVM) in
@@ -29,8 +32,13 @@ struct ViewControllerVM {
         }
     }
 
-    private func loadPlaces(completion: @escaping ((CellsVM?) -> ())) {
-        NetworkManager().getPlaces(location: CGPoint(x: 19.4333, y: -99.1333)) { (result, error) in
+    private func loadPlaces(at point: CGPoint = CGPoint(x: 19.4333, y: -99.1333), completion: @escaping handler) {
+        let pointStr = NSCoder.string(for: point)
+        if let cached = cache[pointStr] {
+            completion(cached)
+        }
+        
+        NetworkManager().getPlaces(location: point) { (result, error) in
             if let error = error {
                 // TODO: add error handing
                 print(error)
@@ -41,6 +49,7 @@ struct ViewControllerVM {
                     return CellVM(place: item)
                 }
                 let placesVm = CellsVM(places: places)
+                self.cache[pointStr] = placesVm
                 completion(placesVm)
             }
         }

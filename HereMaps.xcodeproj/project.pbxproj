@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		D37737822344AE8200D9CA33 /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37737812344AE8200D9CA33 /* ConfigurableCell.swift */; };
 		D37737842344AEBA00D9CA33 /* RowCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37737832344AEBA00D9CA33 /* RowCellViewModel.swift */; };
+		D37737862346749800D9CA33 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37737852346749800D9CA33 /* Cache.swift */; };
+		D377378A2347B62A00D9CA33 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37737892347B62A00D9CA33 /* LinkedList.swift */; };
 		D385774C2343B8D100F74E56 /* ViewControllerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D385774B2343B8D100F74E56 /* ViewControllerVM.swift */; };
 		D385774D2343BB5900F74E56 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BC398323351603001EF3F8 /* Observable.swift */; };
 		D3BC396423350013001EF3F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BC396323350013001EF3F8 /* AppDelegate.swift */; };
@@ -37,6 +39,8 @@
 /* Begin PBXFileReference section */
 		D37737812344AE8200D9CA33 /* ConfigurableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
 		D37737832344AEBA00D9CA33 /* RowCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowCellViewModel.swift; sourceTree = "<group>"; };
+		D37737852346749800D9CA33 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		D37737892347B62A00D9CA33 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		D385774B2343B8D100F74E56 /* ViewControllerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerVM.swift; sourceTree = "<group>"; };
 		D3BC396023350013001EF3F8 /* HereMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HereMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3BC396323350013001EF3F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +85,22 @@
 				D3BC398323351603001EF3F8 /* Observable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D377378723474C8F00D9CA33 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				D37737852346749800D9CA33 /* Cache.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		D37737882347B5C800D9CA33 /* Data Structures */ = {
+			isa = PBXGroup;
+			children = (
+				D37737892347B62A00D9CA33 /* LinkedList.swift */,
+			);
+			path = "Data Structures";
 			sourceTree = "<group>";
 		};
 		D3BC395723350012001EF3F8 = {
@@ -130,6 +150,7 @@
 		D3BC3979233506AA001EF3F8 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				D37737882347B5C800D9CA33 /* Data Structures */,
 				D37737802344AE0800D9CA33 /* Protocols */,
 				D3BC397A233506B2001EF3F8 /* Extensions */,
 			);
@@ -148,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				D3BEEDAC233B7742008D31C8 /* Network */,
+				D377378723474C8F00D9CA33 /* Cache */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -291,11 +313,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D37737862346749800D9CA33 /* Cache.swift in Sources */,
 				D385774D2343BB5900F74E56 /* Observable.swift in Sources */,
 				D3BEEDC423411D11008D31C8 /* NetworkManager.swift in Sources */,
 				D3BC396623350013001EF3F8 /* ViewController.swift in Sources */,
 				D37737822344AE8200D9CA33 /* ConfigurableCell.swift in Sources */,
 				D3BC398123350F3F001EF3F8 /* Places.swift in Sources */,
+				D377378A2347B62A00D9CA33 /* LinkedList.swift in Sources */,
 				D3BEEDBE233BC48A008D31C8 /* NetworkRouter.swift in Sources */,
 				D3BEEDC623437A29008D31C8 /* TableViewCell.swift in Sources */,
 				D3BEEDB2233B7839008D31C8 /* EndPointType.swift in Sources */,
