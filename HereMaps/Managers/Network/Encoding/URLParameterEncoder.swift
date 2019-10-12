@@ -11,7 +11,10 @@ import Foundation
 public struct URLParameterEncoder: ParameterEncoder {
     
     public static func encode(urlRequest: inout URLRequest, with parameters: Parameters) throws {
-        guard let url = urlRequest.url else { throw NetworkError.missingURL }
+        guard let url = urlRequest.url else {
+            Logger.shared.logDebug("no url?")
+            throw NetworkError.missingURL
+        }
         
         if var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false) {
             urlComponents.queryItems = [URLQueryItem]()

@@ -18,7 +18,10 @@ struct ViewControllerVM {
 
     func start() {
         loadPlaces { (placesVM) in
-            guard let places = placesVM else { return }
+            guard let places = placesVM else {
+                print("failed unwrapping placesVM")
+                return
+            }
             self.viewModel.value = places
         }
     }
@@ -44,7 +47,10 @@ struct ViewControllerVM {
                 print(error)
                 completion(nil)
             } else {
-                guard let result = result else { return }
+                guard let result = result else {
+                    print("failed unwrapping result")
+                    return
+                }
                 let places = result.results.items.compactMap { item in
                     return CellVM(place: item)
                 }

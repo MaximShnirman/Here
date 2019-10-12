@@ -76,7 +76,10 @@ extension Router {
     }
     
     fileprivate func additionalHeaders(_ additionalParameters: HTTPHeaders?, request: inout URLRequest) {
-        guard let headers = additionalParameters else { return }
+        guard let headers = additionalParameters else {
+            print("no headers were added although additionalHeaders was called")
+            return
+        }
         for (key, value) in headers {
             request.setValue(value, forHTTPHeaderField: key)
         }

@@ -18,7 +18,7 @@ final class Cache<Key: Hashable, Value> {
     
     func object(for key: Key) -> Value? {
         let entry = wrapped.object(forKey: WrappedKey(key))
-        return entry!.value
+        return entry?.value
     }
     
     func remove(for key: Key) {
@@ -36,6 +36,7 @@ private extension Cache {
 
         override func isEqual(_ object: Any?) -> Bool {
             guard let value = object as? WrappedKey else {
+                print("no object found")
                 return false
             }
 

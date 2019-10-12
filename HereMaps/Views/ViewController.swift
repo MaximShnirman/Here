@@ -47,12 +47,20 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let vm = viewModel else { return UITableViewCell() }
+        guard let vm = viewModel else {
+            print("no view model found. initializing UITableViewCell")
+            return UITableViewCell()
+        }
         let cvm = vm.value.places[indexPath.row] as RowCellViewModel
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: controllerVM.cellIdentifier(for: cvm)) else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: controllerVM.cellIdentifier(for: cvm)) else {
+            print("couldn't dequeue cell for \(cvm)")
+            return UITableViewCell()
+        }
         
         if let cell = cell as? ConfigurableCell {
             cell.setupCell(viewModel: cvm)
+        } else {
+            print("cell is not ConfigurableCell?")
         }
         
         return cell

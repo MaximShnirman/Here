@@ -34,6 +34,7 @@
 		D3BEEDC22341167F008D31C8 /* HereEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BEEDC12341167F008D31C8 /* HereEndPoint.swift */; };
 		D3BEEDC423411D11008D31C8 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BEEDC323411D11008D31C8 /* NetworkManager.swift */; };
 		D3BEEDC623437A29008D31C8 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BEEDC523437A29008D31C8 /* TableViewCell.swift */; };
+		D3E38E6F234B88D100FA1B29 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E38E6E234B88D100FA1B29 /* Logger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		D3BEEDC12341167F008D31C8 /* HereEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HereEndPoint.swift; sourceTree = "<group>"; };
 		D3BEEDC323411D11008D31C8 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		D3BEEDC523437A29008D31C8 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		D3E38E6E234B88D100FA1B29 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 		D3BC397B233506BC001EF3F8 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				D3E38E6D234B889B00FA1B29 /* Logging */,
 				D3BEEDAC233B7742008D31C8 /* Network */,
 				D377378723474C8F00D9CA33 /* Cache */,
 			);
@@ -240,6 +243,14 @@
 				D3BC396523350013001EF3F8 /* ViewController.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		D3E38E6D234B889B00FA1B29 /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				D3E38E6E234B88D100FA1B29 /* Logger.swift */,
+			);
+			path = Logging;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,6 +344,7 @@
 				D3BEEDBA233B8030008D31C8 /* URLParameterEncoder.swift in Sources */,
 				D3BEEDB6233B7A4C008D31C8 /* HTTPTask.swift in Sources */,
 				D3BEEDC22341167F008D31C8 /* HereEndPoint.swift in Sources */,
+				D3E38E6F234B88D100FA1B29 /* Logger.swift in Sources */,
 				D3BC396423350013001EF3F8 /* AppDelegate.swift in Sources */,
 				D3BEEDB4233B78DA008D31C8 /* HTTPMethod.swift in Sources */,
 				D3BEEDBC233BC284008D31C8 /* JSONParameterEncoder.swift in Sources */,

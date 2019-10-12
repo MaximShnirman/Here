@@ -50,6 +50,7 @@ extension NetworkManager {
             switch result {
             case .success(_):
                 guard let responseData = data else {
+                    print("no data?")
                     completion(nil, NetworkResponse.noData)
                     return
                 }
@@ -65,6 +66,8 @@ extension NetworkManager {
                 print("failure: \(networkFailError)")
                 completion(nil, networkFailError)
             }
+        } else {
+            print("failed to unwrrap response as? HTTPURLResponse")
         }
     }
     

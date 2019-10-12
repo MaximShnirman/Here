@@ -32,7 +32,10 @@ class TableViewCell: UITableViewCell {
 extension TableViewCell: ConfigurableCell {
     
     func setupCell(viewModel: RowCellViewModel) {
-        guard let vm = viewModel as? CellVM else { return }
+        guard let vm = viewModel as? CellVM else {
+            print("no view model to setup")
+            return
+        }
         title.text = vm.title
         vicinity.text = vm.vicinity
         href.text = vm.href
