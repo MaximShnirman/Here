@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D31B310C23542E46007EB4F4 /* Place+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31B310A23542E46007EB4F4 /* Place+CoreDataClass.swift */; };
+		D31B310D23542E46007EB4F4 /* Place+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31B310B23542E46007EB4F4 /* Place+CoreDataProperties.swift */; };
+		D31B310F2357BE8A007EB4F4 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31B310E2357BE8A007EB4F4 /* CoreDataManager.swift */; };
 		D37737822344AE8200D9CA33 /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37737812344AE8200D9CA33 /* ConfigurableCell.swift */; };
 		D37737842344AEBA00D9CA33 /* RowCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37737832344AEBA00D9CA33 /* RowCellViewModel.swift */; };
 		D37737862346749800D9CA33 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37737852346749800D9CA33 /* Cache.swift */; };
@@ -38,6 +41,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D31B310A23542E46007EB4F4 /* Place+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Place+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D31B310B23542E46007EB4F4 /* Place+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Place+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D31B310E2357BE8A007EB4F4 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		D37737812344AE8200D9CA33 /* ConfigurableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
 		D37737832344AEBA00D9CA33 /* RowCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowCellViewModel.swift; sourceTree = "<group>"; };
 		D37737852346749800D9CA33 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
@@ -81,6 +87,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D31B310523542E1C007EB4F4 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				D31B310E2357BE8A007EB4F4 /* CoreDataManager.swift */,
+				D31B310A23542E46007EB4F4 /* Place+CoreDataClass.swift */,
+				D31B310B23542E46007EB4F4 /* Place+CoreDataProperties.swift */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
 		D37737802344AE0800D9CA33 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +140,7 @@
 		D3BC396223350013001EF3F8 /* HereMaps */ = {
 			isa = PBXGroup;
 			children = (
+				D31B310523542E1C007EB4F4 /* Core Data */,
 				D3BC397B233506BC001EF3F8 /* Managers */,
 				D3BC3979233506AA001EF3F8 /* Common */,
 				D3BC39822335108C001EF3F8 /* Models */,
@@ -337,6 +354,7 @@
 				D3BC397F23350A53001EF3F8 /* GeocodeObj.swift in Sources */,
 				D37737842344AEBA00D9CA33 /* RowCellViewModel.swift in Sources */,
 				D385774C2343B8D100F74E56 /* ViewControllerVM.swift in Sources */,
+				D31B310C23542E46007EB4F4 /* Place+CoreDataClass.swift in Sources */,
 				D3BC396C23350013001EF3F8 /* HereMaps.xcdatamodeld in Sources */,
 				D3BEEDB8233B7C5F008D31C8 /* ParameterEncoding.swift in Sources */,
 				D3BEEDC02340C0D7008D31C8 /* Router.swift in Sources */,
@@ -345,9 +363,11 @@
 				D3BEEDB6233B7A4C008D31C8 /* HTTPTask.swift in Sources */,
 				D3BEEDC22341167F008D31C8 /* HereEndPoint.swift in Sources */,
 				D3E38E6F234B88D100FA1B29 /* Logger.swift in Sources */,
+				D31B310D23542E46007EB4F4 /* Place+CoreDataProperties.swift in Sources */,
 				D3BC396423350013001EF3F8 /* AppDelegate.swift in Sources */,
 				D3BEEDB4233B78DA008D31C8 /* HTTPMethod.swift in Sources */,
 				D3BEEDBC233BC284008D31C8 /* JSONParameterEncoder.swift in Sources */,
+				D31B310F2357BE8A007EB4F4 /* CoreDataManager.swift in Sources */,
 				D3BC397D2335086C001EF3F8 /* CellsVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
