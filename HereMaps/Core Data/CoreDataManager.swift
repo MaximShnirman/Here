@@ -17,7 +17,7 @@ class CoreDataManager {
     
     private init() {}
     
-    lazy var persistentContainer: NSPersistentContainer = {
+    private lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: CoreDataManager.containerName)
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
@@ -28,93 +28,26 @@ class CoreDataManager {
         })
         return container
     }()
-}
-
-extension CoreDataManager {
     
-    func saveMainContext () {
-        let context = persistentContainer.viewContext
-        if context.hasChanges {
-            do {
-                try context.save()
-            } catch {
-                let nserror = error as NSError
-                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-            }
-        }
+    var viewContext: NSManagedObjectContext {
+        return persistentContainer.viewContext
     }
     
-    func fetchAllPlaces() -> [Place]? {
-        let context = persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Place")
-        
-        do {
-            let places = try context.fetch(fetchRequest)
-            return places as? [Place]
-        } catch let error as NSError {
-            print("Could not fetch. \(error), \(error.userInfo)")
-            return nil
-        }
+    var backgroundContext: NSManagedObjectContext {
+        return persistentContainer.newBackgroundContext()
     }
     
-    func insertPlace(vm: CellVM) -> Place? {
-        let context = persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "Place", in: context)!
-        let place = NSManagedObject(entity: entity, insertInto: context)
-        
-        place.setValue(vm.title, forKeyPath: "title")
-        place.setValue(vm.vicinity, forKeyPath: "vicinity")
-        place.setValue(vm.href, forKeyPath: "href")
-        place.setValue(vm.id, forKeyPath: "id")
+    func saveContext(context: NSManagedObjectContext) {
+        guard context.hasChanges else { return }
         
         do {
             try context.save()
-            return place as? Place
         } catch let error as NSError {
-            print("Could not save. \(error), \(error.userInfo)")
-            return nil
+            print("Error: \(error), \(error.userInfo)")
         }
     }
     
-    func update(vm: CellVM, place : Place) {
-        let context = persistentContainer.viewContext
-        do {
-            place.setValue(vm.title, forKeyPath: "title")
-            place.setValue(vm.vicinity, forKeyPath: "vicinity")
-            place.setValue(vm.href, forKeyPath: "href")
-            place.setValue(vm.id, forKeyPath: "id")
-            
-            do {
-                try context.save()
-                print("saved!")
-            } catch let error as NSError  {
-                print("Could not save \(error), \(error.userInfo)")
-            } catch {
-                
-            }
-        }
+    func saveMainContext() {
+        saveContext(context: viewContext)
     }
-    
-    func delete(id: String) -> [Place]? {
-        let context = persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Place")
-        fetchRequest.predicate = NSPredicate(format: "id == %@", id)
-        
-        do {
-            let placesForId = try context.fetch(fetchRequest)
-            var arrRemovedPlaces = [Place]()
-            
-            for place in placesForId {
-                context.delete(place)
-                try context.save()
-                arrRemovedPlaces.append(place as! Place)
-            }
-            return arrRemovedPlaces
-        } catch let error as NSError {
-            print("Could not fetch. \(error), \(error.userInfo)")
-            return nil
-        }
-        
-    }
-    
 }

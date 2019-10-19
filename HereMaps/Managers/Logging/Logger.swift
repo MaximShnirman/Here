@@ -10,7 +10,7 @@ import Foundation
 import os.log
 
 struct Logger {
-    // TODO: add some logger
+    // TODO: add some file logger?
     
     public static let shared = Logger()
     private let log: OSLog

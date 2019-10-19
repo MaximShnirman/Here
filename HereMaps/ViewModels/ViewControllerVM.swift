@@ -17,6 +17,7 @@ struct ViewControllerVM {
     private let cache = Cache<String, CellsVM>()
 
     func start() {
+        // TODO: call this with actual location
         loadPlaces { (placesVM) in
             guard let places = placesVM else {
                 print("failed unwrapping placesVM")
@@ -51,7 +52,7 @@ struct ViewControllerVM {
                     print("failed unwrapping result")
                     return
                 }
-                let places = result.results.items.compactMap { item in
+                let places: [CellVM] = result.results.items.compactMap { item in
                     return CellVM(place: item)
                 }
                 let placesVm = CellsVM(places: places)
