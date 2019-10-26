@@ -53,7 +53,14 @@ struct ViewControllerVM {
                     return
                 }
                 let places: [CellVM] = result.results.items.compactMap { item in
-                    return CellVM(place: item)
+                    let cellVM = CellVM(place: item)
+                    let moc = CoreDataManager.shared.backgroundContext
+                    do {
+                        try Place.insertPlace(moc: moc, vm: cellVM)
+                    } catch {
+                        print(error)
+                    }
+                    return cellVM
                 }
                 let placesVm = CellsVM(places: places)
                 self.cache[pointStr] = placesVm
